@@ -221,7 +221,7 @@
     "lint": "yarn run lint-code && yarn run lint-dependencies",
     "prefeature-test": "yarn run build-local",
     "prepublish": "yarn run build-local",
-    "postinstall": "npm run build-local",
+    "postinstall": "node scripts/build-non-release.js",
     "test-coverage": "yarn run lint && ./scripts/test-coverage.sh",
     "test": "yarn run lint && yarn run unit-test && yarn run feature-test",
     "unit-test": "mocha src"
